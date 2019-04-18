@@ -21,3 +21,7 @@ require 'faker'
 #     user.city_id = index + 1
 #     user.save
 # end
+
+20.times do 
+    g = Gossip.create!(title: Faker::Lorem.word, content: Faker::Lorem.paragraph, user_id: Faker::Number.between(1, 10))
+end
